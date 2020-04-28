@@ -1,0 +1,46 @@
+body {
+  --text-color: rgb(75, 71, 67);
+  --main-color: #216c2a;
+  color: var(--text-color);
+  outline: none;
+}
+nav {
+  background-color: var(--main-color);
+}
+
+.nac-font {
+  color: azure !important;
+}
+
+nav .navbar-brand {
+  /* size for brand */
+  font-size: xx-large;
+}
+
+main .form-control {
+  /* center form controls */
+  display: inline-block;
+
+  /* override Bootstrap's 100% width for form controls */
+  width: auto;
+}
+
+main {
+  /* scroll horizontally as needed */
+  overflow-x: auto;
+
+  /* center contents */
+  text-align: center;
+}
+
+main img {
+  /* constrain images on small screens */
+  max-width: 100%;
+}
+
+footer a {
+  color: rgb(3, 185, 3);
+}
+footer a:hover {
+  color: var(--main-color);
+}

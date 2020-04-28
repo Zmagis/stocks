@@ -1,0 +1,42 @@
+{% extends "layout.html" %} {% block title %} index {% endblock %} {% block main
+%}
+<h2 class="pb-4">Your Current State summary</h2>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Symbol</th>
+      <th scope="col">Name</th>
+      <th scope="col">Shares</th>
+      <th scope="col">Price</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% if rows %} {% for row in rows %}
+    <tr>
+      <td>{{ row['symbol'] }}</td>
+      <td>{{ row['name'] }}</td>
+      <td>{{ row['shares'] }}</td>
+      <td>${{ row['price'] }}</td>
+      <td>${{ row['total'] }}</td>
+    </tr>
+    {% endfor %} {% endif %}
+    <tr>
+      <td scope="row">CASH</td>
+      <td colspan="3"></td>
+      <td>${{ cash }}</td>
+    </tr>
+    <tr>
+      <td colspan="4"></td>
+      <th>${{ cash + allStocksValue}}</th>
+    </tr>
+  </tbody>
+</table>
+
+<!--<p>{{ rows }}</p>-->
+<!--  {% for row in rows %}-->
+<!--  <li>{{ row }}</li>-->
+<!--  <li>{{ row['stock'] }}</li>-->
+<!--  {% endfor %}-->
+{% endblock %}

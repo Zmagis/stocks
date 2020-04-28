@@ -1,0 +1,17 @@
+{% extends "layout.html" %} {% block title %} Quote {% endblock %} {% block main
+%}
+<h2 class="pb-4">Search for stocks by it's symbol</h2>
+<form action="/quote" method="post">
+  <div class="form-group">
+    <input
+      autocomplete="off"
+      autofocus
+      class="form-control shadow-none border border-secondary"
+      name="symbol"
+      placeholder="Symbol"
+      type="text"
+    />
+  </div>
+  <button class="btn btn-success" type="submit">Quote</button>
+</form>
+{% endblock %}
