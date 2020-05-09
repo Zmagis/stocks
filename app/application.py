@@ -40,7 +40,8 @@ Session(app)
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///finance.db")
 
-# Make sure API key is set
+# Make sure API key is
+FLASK_APP = os.getenv('FLASK_APP')
 API_KEY = os.getenv('API_KEY')
 if not API_KEY:
     raise RuntimeError("API_KEY not set")
